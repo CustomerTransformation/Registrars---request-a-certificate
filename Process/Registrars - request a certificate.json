@@ -12,7 +12,7 @@
     "showCaseReference": false,
     "isPublished": true,
     "isSubform": false,
-    "notes": "added payment integration",
+    "notes": "added a warning in blue about the current details",
     "initial_stage": "Stage 1",
     "initial_stage_id": "AF-Stage-c94cacd8-915b-4b6c-bc18-f64c699a0232",
     "prefix": "CC",
@@ -25,8 +25,8 @@
       "name": "Stage 1",
       "props": {
         "form": "AF-Form-9bc9e6d4-d96c-4379-9ecc-6d32db27ae31",
-        "xpos": 24.985795974731,
-        "ypos": 23.991485595703,
+        "xpos": 24.984375,
+        "ypos": 22.984375,
         "group": "",
         "integrations": [
           {
@@ -125,7 +125,7 @@
         "usenewPaymentMethod": false,
         "user_ucrn": "",
         "formDefinition": {
-          "formName": "Registrars - request a certificate",
+          "formName": "Request a certificate",
           "formDescription": "",
           "props": {
             "id": "AF-Form-9bc9e6d4-d96c-4379-9ecc-6d32db27ae31",
@@ -509,6 +509,21 @@
               },
               "name": "Personal details",
               "fields": [
+                {
+                  "type": "html",
+                  "props": {
+                    "label": "html 7",
+                    "dataName": "html7",
+                    "displayName": "",
+                    "outerClass": "",
+                    "width": "",
+                    "showInSummary": false,
+                    "content": "<p><font color=\"blue\">These are the current details of the person completing this form</font></p>",
+                    "displayCondition": null
+                  },
+                  "conditionInputs": [],
+                  "id": "AF-Field-c963a7f1-552f-47dd-801d-51918e81161a"
+                },
                 {
                   "type": "text",
                   "props": {
