@@ -12,7 +12,7 @@
     "showCaseReference": false,
     "isPublished": true,
     "isSubform": false,
-    "notes": "added a warning in blue about the current details",
+    "notes": "added a  question about the number of certificates required",
     "initial_stage": "Stage 1",
     "initial_stage_id": "AF-Stage-c94cacd8-915b-4b6c-bc18-f64c699a0232",
     "prefix": "CC",
@@ -518,7 +518,7 @@
                     "outerClass": "",
                     "width": "",
                     "showInSummary": false,
-                    "content": "<p><font color=\"blue\">These are the current details of the person completing this form</font></p>",
+                    "content": "<p><font color=\"blue\">These are the current details of the person completing this form. The address entered here will be used to deliver the certificate(s).</font></p>",
                     "displayCondition": null
                   },
                   "conditionInputs": [],
@@ -7553,6 +7553,79 @@
                     "maximumChoices": null,
                     "minimumChoicesMessage": "Please select at least _min_value_ choices",
                     "maximumChoicesMessage": "Please select no more than _max_value_ choices",
+                    "label": "How many certificates would you like to purchase?",
+                    "dataName": "howManyCertificates",
+                    "labelPosition": "alignLeft",
+                    "defaultType": "specific",
+                    "defaultValue": null,
+                    "defaultValueText": null,
+                    "listSource": "one-time-list",
+                    "helpText": "",
+                    "readOnly": false,
+                    "allowOther": false,
+                    "summaryField": false,
+                    "lookup": null,
+                    "lookupCondition": null,
+                    "lookupButton": null,
+                    "preventRunningOnInitialisation": null,
+                    "noResultsMessage": null,
+                    "tokenName": null,
+                    "listOfValues": [
+                      {
+                        "label": "1",
+                        "value": "1"
+                      },
+                      {
+                        "label": "2",
+                        "value": "2"
+                      },
+                      {
+                        "label": "3",
+                        "value": "3"
+                      },
+                      {
+                        "label": "4",
+                        "value": "4"
+                      },
+                      {
+                        "label": "5",
+                        "value": "5"
+                      }
+                    ],
+                    "displayName": true,
+                    "outerClass": null,
+                    "labelClass": null,
+                    "inputClass": null,
+                    "width": null,
+                    "selectLabel": "Select...",
+                    "allowMultiple": false,
+                    "enableFilter": false,
+                    "hideWhenBlank": null,
+                    "hidden": null,
+                    "disableEmptyValue": null,
+                    "displayCondition": null,
+                    "selectCondition": null,
+                    "weAdviseAgainstTheUseOfSelectConditions;PleaseUseDisplayConditionsInstead.": null,
+                    "mandatoryCondition": null,
+                    "readonlyCondition": null,
+                    "mandatory": true,
+                    "mandatoryMessage": "This field is required",
+                    "separatedDateDefaultValue": {
+                      "day": "",
+                      "month": "",
+                      "year": ""
+                    }
+                  },
+                  "conditionInputs": [],
+                  "id": "AF-Field-4b6d1fb9-9ac2-4fea-9c2d-ed028a07789f"
+                },
+                {
+                  "type": "select",
+                  "props": {
+                    "minimumChoices": null,
+                    "maximumChoices": null,
+                    "minimumChoicesMessage": "Please select at least _min_value_ choices",
+                    "maximumChoicesMessage": "Please select no more than _max_value_ choices",
                     "label": "Select the service required",
                     "dataName": "selectService",
                     "labelPosition": "alignLeft",
@@ -8021,7 +8094,7 @@
                     "label": "payCard",
                     "dataName": "payCard",
                     "labelPosition": "alignLeft",
-                    "defaultValue": "11",
+                    "defaultValue": "11 * {howManyCertificates}",
                     "helpText": "",
                     "hidden": true,
                     "readOnly": true,
